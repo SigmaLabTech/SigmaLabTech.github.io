@@ -1,47 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sigma Lab</title>
-    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SigmaLab.Tech</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  font-family: Palatino, serif;  
+}
+
+h2  {
+  margin-top: 0;
+  text-align: center;
+  font-family: Palatino, serif; 
+}
+h3  {
+  margin-top: 0;
+  text-align: center;
+  font-family: Palatino, serif; 
+}
+p {
+  margin-top: 0;
+  text-align: center; 
+  font-size: 17px; 
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding */
+  background-color: black;
+}
+
+.header h1 {
+  margin: 0;
+  text-align: center;
+  margin-top: 0px;
+  font-size: 32px; /* Decrease font size */
+}
+
+/* Navigation Styles */
+nav {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+/* Hamburger Menu Styles */
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  margin-left: auto;
+  width: auto; /* Remove fixed width */
+  height: auto; /* Remove fixed height */
+  position: relative;
+  margin-top: 10px; /* Adjust the top margin to move the hamburger lines down */
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+  transition: background-color 0.3s ease;
+  text-align: right;
+}
+
+.menu-toggle .bar:first-child {
+  margin-top: 0;
+}
+
+/* Menu styles */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0; /* Reduce padding for the menu */
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px; /* Add top margin */
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: none; /* Optional: Add a blur effect */
+  }
+  
+.hero .container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Contact Form Styles */
+.contact-form {
+  background-color: transparent;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form input[type="submit"] {
+  padding: 12px 0;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+/* Footer */
+footer {
+  /* Footer styles */
+}
+
+/* Black Overlay */
+.black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the transparency as needed */
+  z-index: -1;
+  
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 10px; /* Reduce padding */
+    flex-direction: row-reverse; /* Reverse flex direction */
+  }
+
+  .header h1 {
+    font-size: 28px; /* Decrease font size further */
+  }
+
+  .menu-toggle {
+    display: block;
+    order: -1; /* Push to the beginning */
+    margin-bottom: 10px; /* Add margin below the hamburger menu */
+  }
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0; /* Reduce padding for the menu */
+  position: absolute;
+  top: 60px; /* Adjust vertical position */
+  left: 0;
+  right: 0;
+  background-color: rgba(17, 17, 17, 0.6); /* 60% transparency */
+  z-index: 999;
+  flex-direction: column; /* Adjust flex direction for dropdown */
+  display: none; /* Hide initially */
+}
+
+.menu.show {
+  display: flex; /* Show when toggled */
+}
+}
+/* About and Services Section Styles */
+.section {
+  position: relative;
+}
+
+.section .black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the transparency as needed */
+  z-index: -1;
+  
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Sigma Lab</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Sigma Lab is dedicated to providing innovative solutions for your technological needs.</p>
-        </section>
-        
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Web Development</li>
-                <li>Data Analysis</li>
-                <li>Consulting</li>
-            </ul>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:info@sigmalab.tech">info@sigmalab.tech</a></p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Sigma Lab. All rights reserved.</p>
-    </footer>
+<div class="background-video">
+  <video part="video" crossorigin="" playsinline="" muted="" preload="metadata" autoplay loop>
+    <source src="https://videos.pexels.com/video-files/3129957/3129957-uhd_3840_2160_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <h1>SigmaLab.Tech</h1>
+  <!-- Hamburger Menu -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <!-- Menu -->
+  <nav class="menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="container">
+    <h1>Welcome to SigmaLab.Tech</h1>
+    <p>Innovative Digital Solutions</p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="container section" id="about"><!-- Black Overlay for About and Services Sections -->
+  <div class="black-overlay"></div> <!-- Add this line -->
+
+  <h2>About SigmaLab.Tech</h2>
+  <div class="paragraph-list">
+    <p><i class="fas fa-bullseye"></i> <strong>Mission:</strong> Our mission is to simplify life through cutting-edge technical solutions while upholding an unwavering commitment to excellence in all endeavors.</p>
+    <p><i class="fas fa-signal"></i> <strong>Aspiration:</strong> Our satisfaction is intertwined with the success of our clients. We aim to enhance the efficiency, speed, and success of your business operations.</p>
+    <p><i class="fas fa-layer-group"></i> <strong>Diversity in Technical Solutions:</strong> With a diverse team of specialists from various disciplines, we offer a broad range of technical solutions tailored to the unique demands of each project.</p>
+    <p><i class="fas fa-cogs"></i> <strong>Expertise in IoT 4.0:</strong> Specializing in harmonizing production processes, logistics, and end-use applications within a unified digital framework.</p>
+    <p><i class="fas fa-chart-line"></i> <strong>Advancing with MLOps and DevOps:</strong> Staying at the forefront of innovation in Machine Learning Operations (MLOps) and Development Operations (DevOps).</p>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="container section" id="services">
+  <div class="black-overlay"></div> <!-- Add this line -->
+
+  <h2>Services Offered by SigmaLab.Tech</h2>
+  <div class="paragraph-list">
+    <p><i class="fas fa-desktop"></i> <strong>Web Design:</strong> Crafting visually stunning and user-friendly websites tailored to your brand identity and business objectives.</p>
+    <p><i class="fas fa-mobile-alt"></i> <strong>Mobile Apps Development:</strong> Building custom mobile applications for iOS and Android platforms, ensuring seamless user experiences and functionality.</p>
+    <p><i class="fas fa-globe"></i> <strong>Web3.0 Development:</strong> Leveraging the latest advancements in web technologies to create decentralized, interoperable, and user-centric web applications.</p>
+    <p><i class="fas fa-brain"></i> <strong>Machine Learning (ML):</strong> Harnessing the power of machine learning algorithms for enhanced business insights and decision-making.</p>
+    <p><i class="fas fa-wifi"></i> <strong>Internet of Things (IoT):</strong> Designing and implementing IoT solutions to optimize processes for improved efficiency and productivity.</p>
+    <p><i class="fas fa-link"></i> <strong>Blockchain Development:</strong> Developing decentralized applications (dApps) and smart contracts on blockchain platforms.</p>
+    <p><i class="fas fa-share-alt"></i> <strong>Integration with 3rd Party Systems:</strong> Seamlessly integrating systems with third-party applications and services to streamline operations.</p>
+    <p><i class="fas fa-vr-cardboard"></i> <strong>AR/VR Development:</strong> Creating immersive experiences to engage users and enhance brand experiences.</p>
+    <p><i class="fas fa-gamepad"></i> <strong>Unity3D Development:</strong> Designing interactive games, simulations, and visualizations using the Unity3D game engine.</p>
+    <p><i class="fas fa-robot"></i> <strong>AI Solutions:</strong> Building artificial intelligence solutions to automate tasks and optimize business processes.</p>
+    <p><i class="fas fa-code-branch"></i> <strong>DevOps and MLOps:</strong> Implementing practices to automate software development, deployment, and operations.</p>
+  </div>
+</section>
+
+
+<!-- Contact Form -->
+<section class="container" id="contact">
+  <div class="contact-form">
+    <h2>Send Us a Message</h2>
+    <form id="contact-form" method="post" action="https://formspree.io/f/xeojyyeb">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Submit">
+      <p id="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge" style="background-color: black; color: white;">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-youtube w3-hover-opacity"></i>
+  <i class="fa fa-google w3-hover-opacity"></i>
+  <i class="fa fa-spotify w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <div class="container">
+    <p>&copy; 2024 SigmaLab.Tech. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Contact Form Submission Script -->
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    var form = event.target;
+    var data = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset(); // Clear the form fields
+        document.getElementById('status').textContent = 'Thank you for submitting!';
+      } else {
+        document.getElementById('status').textContent = 'There was a problem submitting your form. Please try again!';
+      }
+    };
+    xhr.send(data);
+  });
+
+  // Toggle Menu Function
+  function toggleMenu() {
+    var menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
+  }
+</script>
+
 </body>
 </html>
-
