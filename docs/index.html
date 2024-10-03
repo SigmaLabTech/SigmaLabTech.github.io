@@ -10,14 +10,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-/* Global Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Apex&display=swap');
+     a img {
+        transition: transform 0.3s ease; /* Smooth transition for scaling */
+    }
+
+    a:hover img {
+        transform: scale(1.1); /* Scale up the image on hover */
+    }
+
+    a i {
+        transition: transform 0.3s ease; /* Smooth transition for icon scaling */
+    }
+
+    a:hover i {
+        transform: scale(1.1); /* Scale up the icon on hover */
+    }
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Apex', sans-serif;
   background-color: black;
   color: #fff;
-}
+  
 
 .container {
   max-width: 800px;
@@ -28,18 +43,18 @@ body {
 h1 {
   margin-top: 0;
   text-align: center;
-  font-family: Palatino, serif;  
+  font-family: 'Apex', sans-serif;
 }
 
 h2  {
   margin-top: 0;
   text-align: center;
-  font-family: Palatino, serif; 
+   font-family: 'Apex', sans-serif;
 }
 h3  {
   margin-top: 0;
   text-align: center;
-  font-family: Palatino, serif; 
+   font-family: 'Apex', sans-serif;
 }
 p {
   margin-top: 0;
@@ -140,6 +155,7 @@ nav a {
     width: 100%;
     height: 100%;
     z-index: -1;
+    filter: drop-shadow(16px 16px 20px red) opacity(50%);; /* Optional: Add a blur effect */
   }
 
   .background-video video {
@@ -285,12 +301,15 @@ footer {
 }
 </style>
 </head>
+
 <body>
+
 <div class="background-video">
-  <video part="video" crossorigin="" playsinline="" muted="" preload="metadata" autoplay loop>
-    <source src="https://videos.pexels.com/video-files/3129957/3129957-uhd_3840_2160_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+
+    <video playsinline muted preload="metadata" autoplay loop>
+        <source src="office.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </div>
 
 <!-- Header -->
@@ -314,45 +333,58 @@ footer {
 <!-- Hero Section -->
 <section class="hero" id="home">
   <div class="container">
-    <img src="logo3.png" alt="Sigma Lab Logo" style="height: 100px; margin-bottom: 10px;"> <!-- Increased height -->
+   
+    <img src="logo3.png" alt="Sigma Lab Logo" style="height: 200px; margin-bottom: 20px;"> <!-- Increased height -->
     <h1 style="margin-bottom: 5px;">Sigma Lab</h1> <!-- Reduced margin between titles -->
-    <h3 style="font-size: 24px; margin-top: 0;">Technologies</h3> <!-- Changed to h3 and reduced size -->
   </div>
 </section>
 
 <!-- About Section -->
 <section class="container section" id="about"><!-- Black Overlay for About and Services Sections -->
-  <div class="black-overlay"></div> <!-- Add this line -->
+ 
 
+<!-- About Section -->
+<section class="container section" id="about">
   <h2>About</h2>
+
   <div class="paragraph-list">
-    <p><i class="fas fa-bullseye"></i> <strong>Mission:</strong> Our mission is to simplify life through cutting-edge technical solutions while upholding an unwavering commitment to excellence in all endeavors.</p>
-    <p><i class="fas fa-signal"></i> <strong>Aspiration:</strong> Our satisfaction is intertwined with the success of our clients. We aim to enhance the efficiency, speed, and success of your business operations.</p>
-    <p><i class="fas fa-layer-group"></i> <strong>Diversity in Technical Solutions:</strong> With a diverse team of specialists from various disciplines, we offer a broad range of technical solutions tailored to the unique demands of each project.</p>
-    <p><i class="fas fa-cogs"></i> <strong>Expertise in IoT 4.0:</strong> Specializing in harmonizing production processes, logistics, and end-use applications within a unified digital framework.</p>
-    <p><i class="fas fa-chart-line"></i> <strong>Advancing with MLOps and DevOps:</strong> Staying at the forefront of innovation in Machine Learning Operations (MLOps) and Development Operations (DevOps).</p>
+    <p>
+      Welcome to <strong>Sigma Lab</strong>, a community-driven coding platform designed to empower aspiring developers and tech enthusiasts. Our mission is to create an engaging environment where individuals can collaborate, innovate, and grow together through shared coding projects and meaningful interactions.
+    </p>
+    <p>
+      At Sigma Lab, we believe in the power of community. By integrating platforms like Discord, we facilitate real-time communication, enabling members to share ideas, tackle challenges, and develop projects collaboratively. Our partnership with universities allows us to offer internship credits, enhancing participants' academic profiles while providing them with valuable hands-on experience.
+    </p>
+    <p>
+      Whether you're looking to sharpen your coding skills, build a portfolio, or network with industry professionals, Sigma Lab serves as your launchpad for success in the tech sector.
+    </p>
   </div>
 </section>
 
 <!-- Services Section -->
 <section class="container section" id="services">
-  <div class="black-overlay"></div> <!-- Add this line -->
-
   <h2>Services</h2>
+
   <div class="paragraph-list">
-    <p><i class="fas fa-desktop"></i> <strong>Web Design:</strong> Crafting visually stunning and user-friendly websites tailored to your brand identity and business objectives.</p>
-    <p><i class="fas fa-mobile-alt"></i> <strong>Mobile Apps Development:</strong> Building custom mobile applications for iOS and Android platforms, ensuring seamless user experiences and functionality.</p>
-    <p><i class="fas fa-globe"></i> <strong>Web3.0 Development:</strong> Leveraging the latest advancements in web technologies to create decentralized, interoperable, and user-centric web applications.</p>
-    <p><i class="fas fa-brain"></i> <strong>Machine Learning (ML):</strong> Harnessing the power of machine learning algorithms for enhanced business insights and decision-making.</p>
-    <p><i class="fas fa-wifi"></i> <strong>Internet of Things (IoT):</strong> Designing and implementing IoT solutions to optimize processes for improved efficiency and productivity.</p>
-    <p><i class="fas fa-link"></i> <strong>Blockchain Development:</strong> Developing decentralized applications (dApps) and smart contracts on blockchain platforms.</p>
-    <p><i class="fas fa-share-alt"></i> <strong>Integration with 3rd Party Systems:</strong> Seamlessly integrating systems with third-party applications and services to streamline operations.</p>
-    <p><i class="fas fa-vr-cardboard"></i> <strong>AR/VR Development:</strong> Creating immersive experiences to engage users and enhance brand experiences.</p>
-    <p><i class="fas fa-gamepad"></i> <strong>Unity3D Development:</strong> Designing interactive games, simulations, and visualizations using the Unity3D game engine.</p>
-    <p><i class="fas fa-robot"></i> <strong>AI Solutions:</strong> Building artificial intelligence solutions to automate tasks and optimize business processes.</p>
-    <p><i class="fas fa-code-branch"></i> <strong>DevOps and MLOps:</strong> Implementing practices to automate software development, deployment, and operations.</p>
+    <ul>
+      <li><strong>Online Coding Community:</strong> Join our vibrant platform where volunteers can collaborate on exciting coding projects. Engage with fellow developers, share knowledge, and learn from each other in a supportive atmosphere.</li>
+      <li><strong>Discord Integration:</strong> Utilize Discord as our primary hub for communication and collaboration. Participate in real-time discussions, coordinate projects, and foster a sense of belonging within our community.</li>
+      <li><strong>Internship Credit:</strong> We partner with universities to provide participants with extracurricular credits for their involvement in coding projects, enhancing their resumes and academic profiles.</li>
+      <li><strong>Hackathons and Challenges:</strong> Participate in regular coding challenges and hackathons designed to ignite creativity and teamwork. Compete for prizes sponsored by tech companies and showcase your skills.</li>
+      <li><strong>Workshops and Courses:</strong> We offer a range of paid workshops and courses on coding, project management, and specific technologies, leveraging the expertise within our community to enhance learning opportunities.</li>
+      <li><strong>Project Showcase:</strong> Members can showcase their completed projects, fostering a sense of achievement and attracting more participants to the community.</li>
+    </ul>
+     <p>
+      At Sigma Lab, we are committed to bridging the gap between education and the tech job market, creating a supportive ecosystem that nurtures growth and innovation. Join us today and start your journey toward becoming a successful tech professional! Start now by joining our team on Discord!
+    </p>
+    
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+      <a href="https://discord.com" target="_blank" style="display: inline-block; margin: 2px; transition: transform 0.3s;">
+          <img src="discord-white-icon.png" alt="Discord" style="width: 50px; height: 50px; transition: transform 0.3s;">
+      </a>
+    </div>
   </div>
 </section>
+
 
 
 <!-- Contact Form -->
@@ -368,20 +400,54 @@ footer {
     </form>
   </div>
 </section>
-
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge" style="background-color: black; color: white;">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-youtube w3-hover-opacity"></i>
-  <i class="fa fa-google w3-hover-opacity"></i>
-  <i class="fa fa-spotify w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <div class="container">
-    <p>&copy; 2024 SigmaLab Technologies.</p> 
-    <p>All rights reserved.</p>
-  </div>
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
+    <a href="https://discord.com" target="_blank" style="display: inline-block; margin: 2px; transition: transform 0.3s;">
+        <img src="discord-white-icon.png" alt="Discord" style="width: 32px; height: 32px; transition: transform 0.3s;">
+    </a>
+    <a href="https://www.facebook.com" target="_blank" style="display: inline-block; margin: 2px; transition: transform 0.3s;">
+        <i class="fa fa-facebook-official w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" style="display: inline-block; margin: 2px; transition: transform 0.3s;">
+        <i class="fa fa-instagram w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+    <a href="https://www.youtube.com" target="_blank" style="display: inline-block; margin: 2px; transition: transform 0.3s;">
+        <i class="fa fa-youtube w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+    <a href="https://www.google.com" target="_blank" style="display: inline-block; margin: 2px; transition: transform 0.3s;">
+        <i class="fa fa-google w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+    <a href="https://www.spotify.com" target="_blank" style="display: inline-block; margin: 2px; transition: transform 0.3s;">
+        <i class="fa fa-spotify w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank" style="display: inline-block; margin: 2px; transition: transform 0.3s;">
+        <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+    <div class="container">
+        <p>&copy; 2024 SigmaLab Technologies. All rights reserved.</p>
+    </div>
 </footer>
+<!-- CSS for Hover Effect -->
+<style>
+    a img {
+        transition: transform 0.3s ease; /* Smooth transition for scaling */
+    }
+
+    a:hover img {
+        transform: scale(1.1); /* Scale up the image on hover */
+        color: #fff; /* Change icon color on hover */
+    }
+
+    a i {
+        transition: color 0.3s ease; /* Smooth transition for icon color */
+    a:hover i {
+    color: #fff; /* Change icon color on hover */
+}
+
+    }
+</style>
+
+
 
 <!-- Contact Form Submission Script -->
 <script>
