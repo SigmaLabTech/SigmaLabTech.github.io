@@ -183,6 +183,9 @@ nav a {
   background-color: transparent;
   padding: 40px;
   border-radius: 8px;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center items horizontally */
 }
 
 .contact-form h2 {
@@ -194,7 +197,8 @@ nav a {
 .contact-form input[type="email"],
 .contact-form textarea {
   width: 100%;
-  min-width: 300px; /* Set a minimum width for the fields */
+  max-width: 400px; /* Set a max width for larger screens */
+  min-width: 300px; /* Set a minimum width for smaller screens */
   padding: 10px;
   margin-bottom: 20px;
   border: none;
@@ -203,7 +207,6 @@ nav a {
   color: #fff;
   font-size: 16px;
 }
-
 .contact-form textarea {
   height: 150px;
 }
@@ -216,6 +219,7 @@ nav a {
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
+  max-width: 400px; /* Set a max width for the submit button */
   min-width: 300px; /* Optional: Set a minimum width for submit button */
   font-size: 18px;
   transition: background-color 0.3s ease;
