@@ -29,7 +29,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Apex', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   background-color: black;
   color: #fff;
   
@@ -43,18 +43,18 @@ body {
 h1 {
   margin-top: 0;
   text-align: center;
-  font-family: 'Apex', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 h2  {
   margin-top: 0;
   text-align: center;
-   font-family: 'Apex', sans-serif;
+   font-family: 'Roboto', Arial, sans-serif;
 }
 h3  {
   margin-top: 0;
   text-align: center;
-   font-family: 'Apex', sans-serif;
+   font-family: 'Roboto', Arial, sans-serif;
 }
 p {
   margin-top: 0;
@@ -64,18 +64,22 @@ p {
 
 /* Header Styles */
 .header {
+  position: sticky; /* Make header sticky */
+  top: 0; /* Stick to the top */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px; /* Adjust padding */
+  padding: 10px 20px;
   background-color: black;
+  z-index: 1000; /* Ensure it stays above other elements */
 }
-
+.header-content {
+  display: flex;
+  align-items: center; /* Center logo and text vertically */
+}
 .header h1 {
   margin: 0;
-  text-align: center;
-  margin-top: 0px;
-  font-size: 32px; /* Decrease font size */
+  font-size: 32px; /* Adjust as necessary */
 }
 
 /* Navigation Styles */
@@ -248,39 +252,41 @@ footer {
 
 /* Responsive Styles */
 @media only screen and (max-width: 768px) {
-  .header {
+/* Adjust header for mobile */
+.header {
     padding: 10px; /* Reduce padding */
-    flex-direction: row-reverse; /* Reverse flex direction */
-  }
+    flex-direction: row; /* Keep it horizontal */
+    align-items: center; /* Center items vertically */
+}
 
-  .header h1 {
-    font-size: 28px; /* Decrease font size further */
-  }
+.header-content {
+    flex-grow: 1; /* Allow header content to take available space */
+}
 
-  .menu-toggle {
-    display: block;
-    order: -1; /* Push to the beginning */
-    margin-bottom: 10px; /* Add margin below the hamburger menu */
-  }
+.menu-toggle {
+    display: block; /* Show the hamburger menu on mobile */
+}
 
 .menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px 0; /* Reduce padding for the menu */
-  position: absolute;
-  top: 60px; /* Adjust vertical position */
-  left: 0;
-  right: 0;
-  background-color: rgba(17, 17, 17, 0.6); /* 60% transparency */
-  z-index: 999;
-  flex-direction: column; /* Adjust flex direction for dropdown */
-  display: none; /* Hide initially */
+    display: none; /* Hide initially */
+    flex-direction: column; /* Stack menu items vertically */
+    position: absolute; /* Overlay on other content */
+    top: 60px; /* Position below header */
+    left: 0;
+    right: 0;
+    background-color: rgba(17, 17, 17, 0.8); /* Slightly opaque background */
+    z-index: 999; /* Ensure it appears above other elements */
 }
 
 .menu.show {
-  display: flex; /* Show when toggled */
+    display: flex; /* Show menu when toggled */
 }
+
+/* Ensuring logo and title align left */
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Push other items to the right */
 }
 /* About and Services Section Styles */
 .section {
@@ -304,22 +310,24 @@ footer {
 
 <!-- Header -->
 <div class="header">
-  <h1>SIGMA LAB</h1>
-  <!-- Hamburger Menu -->
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-  <!-- Menu -->
-  <nav class="menu">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <div class="header-content">
+        <img src="logo3.png" alt="Sigma Lab Logo" style="height: 50px; margin-right: 10px;">
+        <h1>SIGMA LAB</h1>
+    </div>
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <!-- Menu -->
+    <nav class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </div>
-
 <!-- Hero Section -->
 <section class="hero" id="home">
   <div class="container">
