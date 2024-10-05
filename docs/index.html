@@ -1,142 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sigma Lab</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Roboto|Apex&display=swap">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #0E0E16;
-            color: #EAEAEA;
-        }
-        
-      .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 80px; /* Add margin-top to prevent overlap with header */
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sigma Lab</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Apex&display=swap');
+     a img {
+        transition: transform 0.3s ease; /* Smooth transition for scaling */
+    }
+
+    a:hover img {
+        transform: scale(1.1); /* Scale up the image on hover */
+    }
+
+    a i {
+        transition: transform 0.3s ease; /* Smooth transition for icon scaling */
+    }
+
+    a:hover i {
+        transform: scale(1.1); /* Scale up the icon on hover */
+    }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #4B9CD3;
+  color: #fff;
+  
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-        h1, h2, h3 {
-            margin-top: 0;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            font-family: 'Apex', sans-serif;
-        }
-
-        h2 {
-            font-size: 36px;
-            margin-top: 20px;
-        }
-
-        p {
-            margin-top: 0;
-            text-align: center; 
-            font-size: 18px; 
-        }
-
- .header {
-    position: flex; /* Keeps the header at the top */
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #1F1F2E; /* Header background */
-    z-index: 1000; /* Ensures it stays above other content */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+h1 {
+  margin-top: 0;
+  text-align: center;
+  font-family: 'Roboto', Arial, sans-serif;
 }
-        .header-content {
-            display: flex;
-            align-items: center;
-        }
 
-        .header img {
-            height: 50px;
-            margin-right: 10px;
-        }
+h2  {
+  margin-top: 0;
+  text-align: center;
+   font-family: 'Roboto', Arial, sans-serif;
+}
+h3  {
+  margin-top: 0;
+  text-align: center;
+   font-family: 'Roboto', Arial, sans-serif;
+}
+p {
+  margin-top: 0;
+  text-align: center; 
+  font-size: 17px; 
+}
 
-        nav {
-            text-align: center;
-            margin-bottom: 5px;
-        }
+/* Header Styles */
+.header {
+  position: sticky; /* Make header sticky */
+  top: 0; /* Stick to the top */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4B9CD3;
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+.header-content {
+  display: flex;
+  align-items: center; /* Center logo and text vertically */
+}
+.header h1 {
+  margin: 0;
+  font-size: 32px; /* Adjust as necessary */
+}
 
-        nav a {
-            color: #EAEAEA;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
+/* Navigation Styles */
+nav {
+  text-align: center;
+  margin-bottom: 5px;
+}
 
-        nav a:hover {
-            color: #4B9CD3;
-        }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+/* Hamburger Menu Styles */
 
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-        }
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  margin-left: auto;
+  width: auto; /* Remove fixed width */
+  height: auto; /* Remove fixed height */
+  position: relative;
+  margin-top: 10px; /* Adjust the top margin to move the hamburger lines down */
+}
 
-        .menu-toggle .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: #EAEAEA;
-            margin: 5px auto;
-            transition: background-color 0.3s ease;
-        }
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+  transition: background-color 0.3s ease;
+  text-align: right;
+}
 
-        .menu {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 5px 0;
-        }
+.menu-toggle .bar:first-child {
+  margin-top: 0;
+}
 
-        .menu a {
-            font-size: 18px;
-        }
+/* Menu styles */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0; /* Reduce padding for the menu */
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: grey;
+}
 
 /* Hero Section */
 .hero {
-    position: relative;
-    overflow: hidden;
-    background-image: url('northern-lights.jpg');
-    background-attachment: fixed; /* Enables the parallax effect */
-    background-size: cover;
-    background-position: center;
-    color: #EAEAEA;
-    height: 110vh; /* Full viewport height */
-    display: flex; /* Center content vertically */
-    align-items: center; /* Center items */
-    justify-content: center; /* Center items */
-    text-align: center; /* Center text */
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px; /* Add top margin */
 }
 
-.container {
-    position: relative;
-    z-index: 1; /* Keep the content above the background */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Background */
+    filter: drop-shadow(16px 16px 20px blue) opacity(50%);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
 }
 
 .hero h1 {
-    font-size: 47px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+  font-size: 52px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
@@ -145,17 +181,9 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-        .background-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            filter: drop-shadow(16px 16px 20px blue) opacity(50%);
-        }
 
-        .contact-form {
+/* Contact Form Styles */
+  .contact-form {
             background-color: transparent;
             padding: 40px;
             border-radius: 8px;
@@ -198,86 +226,111 @@
             background-color: #357B9C;
         }
 
-        footer {
-            background-color: transparent;
-            padding: 40px;
-            text-align: center;
-            color: #EAEAEA;
-        }
 
-        @media only screen and (max-width: 768px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100px;
-                left: 0;
-                right: 0;
-                background-color: transparent; 
-                padding: 10px;
-                z-index: 999;
-            }
-            .menu.show {
-                display: flex;
-            }
-            .menu-toggle {
-                display: block;
-            }
-        }
-        
-        @media only screen and (max-width: 768px) {
-    .header h1 {
-        font-size: 24px; /* Adjust this size as needed */
-    }
-    
-    .header img {
-        height: 40px; /* Adjust logo size for mobile */
-    }
 
-    nav a {
-        font-size: 16px; /* Smaller font size for navigation links */
-    }
+/* Footer */
+footer {
+  /* Footer styles */
 }
-    </style>
+
+.black-overlay {
+    position: fixed; /* Make sure the overlay covers everything */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust transparency */
+    z-index: 0; /* Above video, but below other content */
+
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+/* Adjust header for mobile */
+.header {
+    padding: 10px; /* Reduce padding */
+    flex-direction: row; /* Keep it horizontal */
+    align-items: center; /* Center items vertically */
+}
+
+.header-content {
+    flex-grow: 1; /* Allow header content to take available space */
+}
+
+.menu-toggle {
+    display: block; /* Show the hamburger menu on mobile */
+}
+
+.menu {
+    display: none; /* Hide initially */
+    flex-direction: column; /* Stack menu items vertically */
+    position: absolute; /* Overlay on other content */
+    top: 60px; /* Position below header */
+    left: 0;
+    right: 0;
+    background-color: #4B9CD3; 
+    z-index: 999; /* Ensure it appears above other elements */
+    padding: 40px; /* Increase padding here */
+}
+.menu.show {
+    display: flex; /* Show menu when toggled */
+}
+
+/* Ensuring logo and title align left */
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Push other items to the right */
+}
+/* About and Services Section Styles */
+.section {
+  position: relative;
+}
+
+
+}
+</style>
 </head>
 
 <body>
-    <div class="background-video">
-        <video playsinline muted preload="metadata" autoplay loop>
-            <source src="code.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+
+<div class="background-video">
+
+    <video playsinline muted preload="metadata" autoplay loop>
+        <source src="code.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- Header -->
+<div class="header">
+    <div class="header-content">
+        <img src="logo3.png" alt="Sigma Lab Logo" style="height: 50px; margin-right: 10px;">
+        <h1>SIGMA LAB</h1>
     </div>
-    <div class="header">
-        <div class="header-content">
-            <img src="logo3.png" alt="Sigma Lab Logo">
-            <h1>SIGMA LAB</h1>
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <nav class="menu">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </div>
-
-<!-- Hero Section -->
-
-
+    <!-- Menu -->
+    <nav class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
 <!-- Hero Section -->
 <section class="hero" id="home">
-  <div class="container" style="text-align: center;">
-    <img src="logo3.png" alt="Sigma Lab Logo" style="height: 200px; margin-bottom: 10px;">
-    <h1 style="margin-bottom: 200px;">SIGMA LAB</h1>
+  <div class="container">
+   
+    <img src="logo3.png" alt="Sigma Lab Logo" style="height: 200px; margin-bottom: 20px;"> <!-- Increased height -->
+    <h1 style="margin-bottom: 5px;">SIGMA LAB</h1> <!-- Reduced margin between titles -->
   </div>
 </section>
 
-  
 <!-- About Section -->
 <section class="container section" id="about"><!-- Black Overlay for About and Services Sections -->
  
@@ -329,53 +382,98 @@
   </div>
 </section>
 
-    <section class="container" id="contact">
-        <div class="contact-form">
-            <h2>Contact</h2>
-            <form id="contact-form" method="post" action="https://formspree.io/f/xeojyyeb">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                <input type="submit" value="Send Message">
-            </form>
-        </div>
-    </section>
 
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
-        <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 3px 0;">
-            <a href="https://discord.com" target="_blank" style="display: inline-block; margin: 0 3px;">
-                <img src="discord-white-icon.png" alt="Discord" style="width: 32px; height: 32px;">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <i class="fab fa-facebook-square" style="font-size: 32px; margin: 0 10px;"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <i class="fab fa-instagram" style="font-size: 32px; margin: 0 10px;"></i>
-            </a>
-            <a href="https://www.youtube.com" target="_blank">
-                <i class="fab fa-youtube" style="font-size: 32px; margin: 0 10px;"></i>
-            </a>
-            <a href="https://www.google.com" target="_blank">
-                <i class="fab fa-google" style="font-size: 32px; margin: 0 10px;"></i>
-            </a>
-            <a href="https://www.spotify.com" target="_blank">
-                <i class="fab fa-spotify" style="font-size: 32px; margin: 0 10px;"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank">
-                <i class="fab fa-linkedin" style="font-size: 32px; margin: 0 10px;"></i>
-            </a>
-        </div>
-        <div>
-            <p>&copy; 2024 Sigma Lab Technologies.</p> 
-            <p>All rights reserved.</p>
-        </div>
-    </footer>
+<!-- Contact Form -->
+<section class="container" id="contact" style="max-width: 600px; margin: auto;">
+  <div class="contact-form">
+    <h2>Contact</h2>
+    <form id="contact-form" method="post" action="https://formspree.io/f/xeojyyeb">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Submit">
+      <p id="status"></p>
+    </form>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 3px 0;">
+    <a href="https://discord.com" target="_blank" style="display: inline-block; margin: 0 3px; transition: transform 0.3s;">
+      <img src="discord-white-icon.png" alt="Discord" style="width: 32px; height: 32px; transition: transform 0.3s;">
+    </a>
+    <a href="https://www.facebook.com" target="_blank" style="display: inline-block; margin: 0 3px; transition: transform 0.3s;">
+      <i class="fa fa-facebook-official w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" style="display: inline-block; margin: 0 3px; transition: transform 0.3s;">
+      <i class="fa fa-instagram w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+    <a href="https://www.youtube.com" target="_blank" style="display: inline-block; margin: 0 3px; transition: transform 0.3s;">
+      <i class="fa fa-youtube w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+    <a href="https://www.google.com" target="_blank" style="display: inline-block; margin: 0 3px; transition: transform 0.3s;">
+      <i class="fa fa-google w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+    <a href="https://www.spotify.com" target="_blank" style="display: inline-block; margin: 0 3px; transition: transform 0.3s;">
+      <i class="fa fa-spotify w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank" style="display: inline-block; margin: 0 3px; transition: transform 0.3s;">
+      <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 30px;"></i>
+    </a>
+  </div>
+  <div>
+    <p>&copy; 2024 Sigma Lab Technologies.</p> 
+    <p>All rights reserved.</p>
+  </div>
+<!-- CSS for Hover Effect -->
+<style>
+    a img {
+        transition: transform 0.3s ease; /* Smooth transition for scaling */
+    }
 
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            menu.classList.toggle('show');
-        }
-    </script>
+    a:hover img {
+        transform: scale(1.1); /* Scale up the image on hover */
+        color: #fff; /* Change icon color on hover */
+    }
+
+    a i {
+        transition: color 0.3s ease; /* Smooth transition for icon color */
+    a:hover i {
+    color: #fff; /* Change icon color on hover */
+}
+
+    }
+</style>
+
+
+
+<!-- Contact Form Submission Script -->
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    var form = event.target;
+    var data = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset(); // Clear the form fields
+        document.getElementById('status').textContent = 'Thank you for submitting!';
+      } else {
+        document.getElementById('status').textContent = 'There was a problem submitting your form. Please try again!';
+      }
+    };
+    xhr.send(data);
+  });
+
+  // Toggle Menu Function
+  function toggleMenu() {
+    var menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
+  }
+</script>
+
 </body>
 </html>
