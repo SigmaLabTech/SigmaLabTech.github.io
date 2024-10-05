@@ -389,26 +389,7 @@ font-size: 12px;
     </footer>
 
   <script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-    var form = event.target;
-    var data = new FormData(form);
-    var xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action);
-    xhr.setRequestHeader('Accept', 'application/json');
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        form.reset(); // Clear the form fields
-        document.getElementById('status').textContent = 'Thank you for submitting!';
-      } else {
-        document.getElementById('status').textContent = 'There was a problem submitting your form. Please try again!';
-      }
-    };
-    xhr.send(data);
-  });
 
-  
         function toggleMenu() {
             const menu = document.querySelector('.menu');
             menu.classList.toggle('show');
