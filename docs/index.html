@@ -213,14 +213,23 @@ font-size: 12px;
         @media only screen and (max-width: 768px) {
             .menu {
                 display: none;
+ background-image: url('northern-lights.jpg');
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    
                 flex-direction: column;
                 position: absolute;
-                top: 100px;
+                top: 66px;
                 left: 0;
                 right: 0;
-                background-color: transparent; 
-                padding: 10px;
+                bottom: 0;
+                background-color:  #1F1F2E; 
+                padding: 100px;
                 z-index: 999;
+       
+                
+                justify-content: left; 
             }
             .menu.show {
                 display: flex;
